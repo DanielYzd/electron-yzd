@@ -56,9 +56,9 @@ function updateHandle() {
     let version=app.getVersion()
     let message = {
         error: '检查更新出错',
-        checking: '正在检查更新。。。'+version,
+        checking: '正在检查更新...',
         updateAva: '检测到新版本，正在下载……',
-        updateNotAva: '当前为最新版本！'+version,
+        updateNotAva: '当前为最新版本----'+version,
         
     };
     const os = require('os');

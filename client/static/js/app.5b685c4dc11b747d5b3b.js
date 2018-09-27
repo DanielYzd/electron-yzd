@@ -119,6 +119,13 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAAiCAYAAACX
 
 /***/ }),
 
+/***/ "E8rV":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "FKGm":
 /***/ (function(module, exports) {
 
@@ -411,19 +418,19 @@ var extends_default = /*#__PURE__*/__webpack_require__.n(helpers_extends);
 //服务器配置文件修改
 var Config = {
     //测试环境
-    siteCode: '5201', //工厂编号
-    apiBaseUrl: 'http://10.128.21.11/',
-    wsbroker: '10.128.21.15', //mqtt地址
-    wsport: 15675, //端口号npm 
-    userName: "dmes", //用户名
-    password: "dmes@mq!@#" //密码
+    // siteCode: '5201', //工厂编号
+    // apiBaseUrl: 'http://10.128.21.11/',
+    // wsbroker: '10.128.21.15', //mqtt地址
+    // wsport: 15675, //端口号npm 
+    // userName: "dmes", //用户名
+    // password: "dmes@mq!@#" //密码
     // apiBaseUrl: 'http://10.200.150.255:8031/'
     //生产环境
-    // apiBaseUrl: 'http://10.128.20.20/',
-    // wsbroker: '10.128.20.30',//mqtt地址
-    // wsport: 15675,//端口号
-    // userName: "dmes",//用户名
-    // password: "dmesMq#1l"//密码
+    apiBaseUrl: 'http://10.128.20.20/',
+    wsbroker: '10.128.20.30', //mqtt地址
+    wsport: 15675, //端口号
+    userName: "dmes", //用户名
+    password: "dmesMq#1l" //密码
 
 };
 /* harmony default export */ var config = (Config);
@@ -2114,17 +2121,18 @@ window.particlesJS.load = function (tag_id, path_config_json, callback) {
             ipcRenderer.on("message", function (event, text) {
               console.log(text);
               _this.text = text;
+              // if(text.indexOf('当前为最新版本')){
+              //   setTimeout(this.centerDialogVisible=false,3000);
+              // }
             });
             ipcRenderer.on("downloadProgress", function (event, progressObj) {
+              console.log("开始下载");
+              console.log(progressObj);
               var downloadPercent = progressObj.percent || 0;
               _this.downloadPercent = downloadPercent.toFixed(0);
             });
             ipcRenderer.on("isUpdateNow", function () {
-              if (confirm("现在更新？")) {
-                ipcRenderer.send("isUpdateNow");
-              } else {
-                _this.centerDialogVisible = false;
-              }
+              ipcRenderer.send("updateNow");
             });
           }
         } catch (error) {
@@ -2192,17 +2200,18 @@ window.particlesJS.load = function (tag_id, path_config_json, callback) {
             ipcRenderer.on("message", function (event, text) {
               console.log(text);
               _this.text = text;
+              // if(text.indexOf('当前为最新版本')){
+              //   setTimeout(this.centerDialogVisible=false,3000);
+              // }
             });
             ipcRenderer.on("downloadProgress", function (event, progressObj) {
+              console.log("开始下载");
+              console.log(progressObj);
               var downloadPercent = progressObj.percent || 0;
               _this.downloadPercent = downloadPercent.toFixed(0);
             });
             ipcRenderer.on("isUpdateNow", function () {
-              if (confirm("现在更新？")) {
-                ipcRenderer.send("isUpdateNow");
-              } else {
-                _this.centerDialogVisible = false;
-              }
+              ipcRenderer.send("updateNow");
             });
           }
         } catch (error) {
@@ -2224,14 +2233,14 @@ window.particlesJS.load = function (tag_id, path_config_json, callback) {
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-8d254492","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/mytitle/Mytitle.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-438cb725","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/mytitle/Mytitle.vue
 var Mytitle_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"mytitle"}},[_c('div',{staticClass:"close",on:{"click":function($event){_vm.close()}}}),_vm._v(" "),_c('div',{staticClass:"min",on:{"click":function($event){_vm.min()}}}),_vm._v(" "),_c('div',{staticClass:"update",on:{"click":function($event){_vm.update()}}}),_vm._v(" "),_c('el-dialog',{attrs:{"title":_vm.text,"visible":_vm.centerDialogVisible,"width":"30%","center":""},on:{"update:visible":function($event){_vm.centerDialogVisible=$event}}},[_c('el-progress',{attrs:{"percentage":_vm.downloadPercent,"stroke-width":18}}),_vm._v(" "),_c('span',{staticClass:"dialog-footer",attrs:{"slot":"footer"},slot:"footer"},[_c('el-button',{attrs:{"type":"primary"},on:{"click":function($event){_vm.centerDialogVisible = false}}},[_vm._v("关闭")])],1)],1)],1)}
 var Mytitle_staticRenderFns = []
 var Mytitle_esExports = { render: Mytitle_render, staticRenderFns: Mytitle_staticRenderFns }
 /* harmony default export */ var components_mytitle_Mytitle = (Mytitle_esExports);
 // CONCATENATED MODULE: ./src/components/mytitle/Mytitle.vue
 function Mytitle_injectStyle (ssrContext) {
-  __webpack_require__("g/c4")
+  __webpack_require__("E8rV")
 }
 var Mytitle_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -19312,13 +19321,6 @@ new vue_esm["default"]({
 
 /***/ }),
 
-/***/ "g/c4":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "jVNZ":
 /***/ (function(module, exports) {
 
@@ -19362,4 +19364,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAADqCAYAAACr
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.445d2f07ac7f0def13ff.js.map
+//# sourceMappingURL=app.5b685c4dc11b747d5b3b.js.map
