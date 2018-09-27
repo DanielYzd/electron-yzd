@@ -1,7 +1,7 @@
 {
   "name": "client",
-  "productName": "DMES-CLIENT-PROD",
-  "version": "0.1.4",
+  "productName": "DMES-CLIENT-TEST",
+  "version": "0.1.6",
   "main": "main.js",
   "devDependencies": {
     "electron": "^1.7.11",

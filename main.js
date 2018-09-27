@@ -80,7 +80,7 @@ function updateHandle() {
         webContents.send('downloadProgress', progressObj)
     })
     autoUpdater.on('update-downloaded', function (event, releaseNotes, releaseName, releaseDate, updateUrl, quitAndUpdate) {
-        ipcMain.on('isUpdateNow', (e, arg) => {
+        ipcMain.on('updateNow', (e, arg) => {
             //some code here to handle event
             autoUpdater.quitAndInstall();
         })
