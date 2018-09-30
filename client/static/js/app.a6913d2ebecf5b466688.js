@@ -7,13 +7,6 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ "+tzm":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "12B/":
 /***/ (function(module, exports) {
 
@@ -57,6 +50,13 @@ webpackJsonp([1],{
 /***/ }),
 
 /***/ "4IWs":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "4JGI":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -119,6 +119,20 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAAiCAYAAACX
 
 /***/ }),
 
+/***/ "Biw1":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "Csx/":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "E8rV":
 /***/ (function(module, exports) {
 
@@ -141,13 +155,6 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAAiCAYAAACX
 /***/ }),
 
 /***/ "Luh7":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "MeZw":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -6627,6 +6634,10 @@ var systemconfiguration_Component = systemconfiguration_normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -6639,6 +6650,7 @@ var systemconfiguration_Component = systemconfiguration_normalizeComponent(
       pagesize: 6,
       tableData: [],
       proinfo: "",
+      proinfo2: "",
       serialNo: "",
       number: 0,
       dialogTableVisible: false,
@@ -6756,6 +6768,10 @@ var systemconfiguration_Component = systemconfiguration_normalizeComponent(
               _this.proinfo = res.data.data;
             }
           });
+          http(api.cylineHead, body).then(function (response) {
+            console.log(response);
+            _this.proinfo2 = response.data.data;
+          });
         }
       });
       mqtt.registerMessageHandler(topic2, "message", function (message) {
@@ -6780,7 +6796,6 @@ var systemconfiguration_Component = systemconfiguration_normalizeComponent(
       // });
     },
     unsubscribe: function unsubscribe() {
-
       mqtt.unsubscribeAll();
     },
     getHistoryInfo: function getHistoryInfo() {
@@ -6925,6 +6940,10 @@ var systemconfiguration_Component = systemconfiguration_normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -6937,6 +6956,7 @@ var systemconfiguration_Component = systemconfiguration_normalizeComponent(
       pagesize: 6,
       tableData: [],
       proinfo: "",
+      proinfo2: "",
       serialNo: "",
       number: 0,
       dialogTableVisible: false,
@@ -7054,6 +7074,10 @@ var systemconfiguration_Component = systemconfiguration_normalizeComponent(
               _this.proinfo = res.data.data;
             }
           });
+          http(api.cylineHead, body).then(function (response) {
+            console.log(response);
+            _this.proinfo2 = response.data.data;
+          });
         }
       });
       mqtt.registerMessageHandler(topic2, "message", function (message) {
@@ -7078,7 +7102,6 @@ var systemconfiguration_Component = systemconfiguration_normalizeComponent(
       // });
     },
     unsubscribe: function unsubscribe() {
-
       mqtt.unsubscribeAll();
     },
     getHistoryInfo: function getHistoryInfo() {
@@ -7123,14 +7146,14 @@ var systemconfiguration_Component = systemconfiguration_normalizeComponent(
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-7f44c080","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/views/assembly/load.vue
-var load_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"initialize"},[_c('div',{staticClass:"topbox"},[_c('el-container',[_c('el-aside',[_c('div',{staticClass:"right-container"},[_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productOrderNum')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("订单进度")]),_vm._v(" "),_c('div',{staticClass:"detail"})])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productionOrderNum')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productionOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.materialCode')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.materialCode))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":24}},[_c('label',{staticClass:"label"},[_vm._v("产品机型")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productModel))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":24}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.serialNo')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.serialNo))])])],1)],1)]),_vm._v(" "),_c('el-main',[_c('div',{staticClass:"progress"},[_c('div',{staticClass:"container"},[_c('el-steps',{attrs:{"direction":"vertical","active":_vm.number}},_vm._l((_vm.StepDatas),function(stepData,index){return _c('el-step',{key:index,attrs:{"title":stepData.title,"status":stepData.status}})}))],1)])])],1)],1),_vm._v(" "),_c('div',{staticClass:"bottom-form"},[_c('el-table',{staticStyle:{"width":"100%"},attrs:{"data":_vm.tableData,"border":""}},[_c('el-table-column',{attrs:{"prop":"productOrderNum","label":_vm.$t('message.productOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":_vm.$t('message.productionOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":_vm.$t('message.materialCode')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialText","label":_vm.$t('message.materialText')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productModel","label":"产品机型"}})],1)],1),_vm._v(" "),_c('div',{staticClass:"icon-pad-history",on:{"click":function($event){_vm.getHistoryInfo()}}}),_vm._v(" "),_c('el-dialog',{attrs:{"visible":_vm.dialogTableVisible,"width":"98%","top":"10vh"},on:{"update:visible":function($event){_vm.dialogTableVisible=$event}}},[_c('el-table',{attrs:{"data":_vm.gridData}},[_c('el-table-column',{attrs:{"type":"index","label":"序号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productOrderNum","label":_vm.$t('message.productOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":_vm.$t('message.productionOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":_vm.$t('message.materialCode')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialText","label":_vm.$t('message.materialText')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productModel","label":_vm.$t('message.productModel')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"serialNo","label":_vm.$t('message.serialNo')}})],1),_vm._v(" "),_c('el-pagination',{attrs:{"page-size":_vm.pagesize,"layout":"total,prev, pager, next","total":_vm.total},on:{"current-change":_vm.handleCurrentChange}})],1)],1)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-611174b2","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/views/assembly/load.vue
+var load_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"initialize"},[_c('div',{staticClass:"topbox"},[_c('el-container',[_c('el-aside',[_c('div',{staticClass:"right-container"},[_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productOrderNum')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("订单进度")]),_vm._v(" "),_c('div',{staticClass:"detail"})])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productionOrderNum')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productionOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.materialCode')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.materialCode))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("产品机型")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productModel))])]),_vm._v(" "),_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("进度")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo2.completeQty)),_c('span',[_vm._v("/")]),_vm._v(_vm._s(_vm.proinfo2.plannedQuantity))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":24}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.serialNo')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.serialNo))])])],1)],1)]),_vm._v(" "),_c('el-main',[_c('div',{staticClass:"progress"},[_c('div',{staticClass:"container"},[_c('el-steps',{attrs:{"direction":"vertical","active":_vm.number}},_vm._l((_vm.StepDatas),function(stepData,index){return _c('el-step',{key:index,attrs:{"title":stepData.title,"status":stepData.status}})}))],1)])])],1)],1),_vm._v(" "),_c('div',{staticClass:"bottom-form"},[_c('el-table',{staticStyle:{"width":"100%"},attrs:{"data":_vm.tableData,"border":""}},[_c('el-table-column',{attrs:{"prop":"productOrderNum","label":_vm.$t('message.productOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":_vm.$t('message.productionOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":_vm.$t('message.materialCode')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialText","label":_vm.$t('message.materialText')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productModel","label":"产品机型"}})],1)],1),_vm._v(" "),_c('div',{staticClass:"icon-pad-history",on:{"click":function($event){_vm.getHistoryInfo()}}}),_vm._v(" "),_c('el-dialog',{attrs:{"visible":_vm.dialogTableVisible,"width":"98%","top":"10vh"},on:{"update:visible":function($event){_vm.dialogTableVisible=$event}}},[_c('el-table',{attrs:{"data":_vm.gridData}},[_c('el-table-column',{attrs:{"type":"index","label":"序号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productOrderNum","label":_vm.$t('message.productOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":_vm.$t('message.productionOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":_vm.$t('message.materialCode')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialText","label":_vm.$t('message.materialText')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productModel","label":_vm.$t('message.productModel')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"serialNo","label":_vm.$t('message.serialNo')}})],1),_vm._v(" "),_c('el-pagination',{attrs:{"page-size":_vm.pagesize,"layout":"total,prev, pager, next","total":_vm.total},on:{"current-change":_vm.handleCurrentChange}})],1)],1)}
 var load_staticRenderFns = []
 var load_esExports = { render: load_render, staticRenderFns: load_staticRenderFns }
 /* harmony default export */ var views_assembly_load = (load_esExports);
 // CONCATENATED MODULE: ./src/views/assembly/load.vue
 function load_injectStyle (ssrContext) {
-  __webpack_require__("+tzm")
+  __webpack_require__("inK0")
 }
 var load_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -7247,6 +7270,10 @@ var load_Component = load_normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -7259,6 +7286,7 @@ var load_Component = load_normalizeComponent(
       pagesize: 6,
       tableData: [],
       proinfo: "",
+      proinfo2: '',
       serialNo: "",
       number: 0,
       dialogTableVisible: false,
@@ -7374,6 +7402,12 @@ var load_Component = load_normalizeComponent(
           http(api.getSerialNoInformation, body).then(function (res) {
             if (res.data.returnCode == "0") {
               _this.proinfo = res.data.data;
+            }
+          });
+          http(api.cylineHead, body).then(function (response) {
+            console.log(response);
+            if (res.data.returnCode == "0") {
+              _this.proinfo2 = response.data.data;
             }
           });
         }
@@ -7535,6 +7569,10 @@ var load_Component = load_normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -7547,6 +7585,7 @@ var load_Component = load_normalizeComponent(
       pagesize: 6,
       tableData: [],
       proinfo: "",
+      proinfo2: '',
       serialNo: "",
       number: 0,
       dialogTableVisible: false,
@@ -7664,6 +7703,12 @@ var load_Component = load_normalizeComponent(
               _this.proinfo = res.data.data;
             }
           });
+          http(api.cylineHead, body).then(function (response) {
+            console.log(response);
+            if (res.data.returnCode == "0") {
+              _this.proinfo2 = response.data.data;
+            }
+          });
         }
       });
       mqtt.registerMessageHandler(topic2, "message", function (message) {
@@ -7733,14 +7778,14 @@ var load_Component = load_normalizeComponent(
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-30efb87a","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/views/assembly/initialize.vue
-var initialize_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"initialize"},[_c('div',{staticClass:"topbox"},[_c('el-container',[_c('el-aside',[_c('div',{staticClass:"right-container"},[_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productOrderNum')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("订单进度")]),_vm._v(" "),_c('div',{staticClass:"detail"})])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productionOrderNum')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productionOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.materialCode')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.materialCode))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":24}},[_c('label',{staticClass:"label"},[_vm._v("产品机型")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productModel))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":24}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.serialNo')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.serialNo))])])],1)],1)]),_vm._v(" "),_c('el-main',[_c('div',{staticClass:"progress"},[_c('div',{staticClass:"container"},[_c('el-steps',{attrs:{"direction":"vertical","active":_vm.number}},_vm._l((_vm.StepDatas),function(stepData,index){return _c('el-step',{key:index,attrs:{"title":stepData.title,"status":stepData.status}})}))],1)])])],1)],1),_vm._v(" "),_c('div',{staticClass:"bottom-form"}),_vm._v(" "),_c('el-dialog',{attrs:{"visible":_vm.dialogTableVisible,"width":"98%","top":"10vh"},on:{"update:visible":function($event){_vm.dialogTableVisible=$event}}},[_c('el-table',{attrs:{"data":_vm.gridData}},[_c('el-table-column',{attrs:{"type":"index","label":"序号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productOrderNum","label":_vm.$t('message.productOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":_vm.$t('message.productionOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":_vm.$t('message.materialCode')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialText","label":_vm.$t('message.materialText')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productModel","label":_vm.$t('message.productModel')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"serialNo","label":_vm.$t('message.serialNo')}})],1),_vm._v(" "),_c('el-pagination',{attrs:{"page-size":_vm.pagesize,"layout":"total,prev, pager, next","total":_vm.total},on:{"current-change":_vm.handleCurrentChange}})],1)],1)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-77d45875","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/views/assembly/initialize.vue
+var initialize_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"initialize"},[_c('div',{staticClass:"topbox"},[_c('el-container',[_c('el-aside',[_c('div',{staticClass:"right-container"},[_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productOrderNum')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("订单进度")]),_vm._v(" "),_c('div',{staticClass:"detail"})])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productionOrderNum')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productionOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.materialCode')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.materialCode))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("产品机型")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productModel))])]),_vm._v(" "),_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("进度")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo2.completeQty)),_c('span',[_vm._v("/")]),_vm._v(_vm._s(_vm.proinfo2.plannedQuantity))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":24}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.serialNo')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.serialNo))])])],1)],1)]),_vm._v(" "),_c('el-main',[_c('div',{staticClass:"progress"},[_c('div',{staticClass:"container"},[_c('el-steps',{attrs:{"direction":"vertical","active":_vm.number}},_vm._l((_vm.StepDatas),function(stepData,index){return _c('el-step',{key:index,attrs:{"title":stepData.title,"status":stepData.status}})}))],1)])])],1)],1),_vm._v(" "),_c('div',{staticClass:"bottom-form"}),_vm._v(" "),_c('el-dialog',{attrs:{"visible":_vm.dialogTableVisible,"width":"98%","top":"10vh"},on:{"update:visible":function($event){_vm.dialogTableVisible=$event}}},[_c('el-table',{attrs:{"data":_vm.gridData}},[_c('el-table-column',{attrs:{"type":"index","label":"序号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productOrderNum","label":_vm.$t('message.productOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":_vm.$t('message.productionOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":_vm.$t('message.materialCode')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialText","label":_vm.$t('message.materialText')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productModel","label":_vm.$t('message.productModel')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"serialNo","label":_vm.$t('message.serialNo')}})],1),_vm._v(" "),_c('el-pagination',{attrs:{"page-size":_vm.pagesize,"layout":"total,prev, pager, next","total":_vm.total},on:{"current-change":_vm.handleCurrentChange}})],1)],1)}
 var initialize_staticRenderFns = []
 var initialize_esExports = { render: initialize_render, staticRenderFns: initialize_staticRenderFns }
 /* harmony default export */ var views_assembly_initialize = (initialize_esExports);
 // CONCATENATED MODULE: ./src/views/assembly/initialize.vue
 function initialize_injectStyle (ssrContext) {
-  __webpack_require__("bJPR")
+  __webpack_require__("rW+Q")
 }
 var initialize_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -7852,6 +7897,10 @@ var initialize_Component = initialize_normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -7865,6 +7914,7 @@ var initialize_Component = initialize_normalizeComponent(
       pagesize: 6,
       tableData: [],
       proinfo: {},
+      proinfo2: "",
       serialNo: "",
       dialogTableVisible: false,
       gridData: [],
@@ -8021,6 +8071,12 @@ var initialize_Component = initialize_normalizeComponent(
           http(api.getSerialNoInformation, body).then(function (res) {
             if (res.data.returnCode == "0") {
               _this.proinfo = res.data.data;
+            }
+          });
+          http(api.cylineHead, body).then(function (response) {
+            console.log(response);
+            if (res.data.returnCode == "0") {
+              _this.proinfo2 = response.data.data;
             }
           });
         }
@@ -8123,6 +8179,10 @@ var initialize_Component = initialize_normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -8136,6 +8196,7 @@ var initialize_Component = initialize_normalizeComponent(
       pagesize: 6,
       tableData: [],
       proinfo: {},
+      proinfo2: "",
       serialNo: "",
       dialogTableVisible: false,
       gridData: [],
@@ -8294,6 +8355,12 @@ var initialize_Component = initialize_normalizeComponent(
               _this.proinfo = res.data.data;
             }
           });
+          http(api.cylineHead, body).then(function (response) {
+            console.log(response);
+            if (res.data.returnCode == "0") {
+              _this.proinfo2 = response.data.data;
+            }
+          });
         }
       });
       mqtt.registerMessageHandler(topic2, "message", function (message) {
@@ -8309,14 +8376,14 @@ var initialize_Component = initialize_normalizeComponent(
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-a36487b0","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/views/assembly/pt/initialize.vue
-var pt_initialize_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"assemblyOnline"},[_c('el-container',[_c('el-aside',{attrs:{"width":"60%"}},[_c('el-row',{attrs:{"gutter":10}},[_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("订单编号")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("工单编号")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productionOrderNum))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":10}},[_c('el-col',{attrs:{"span":24}},[_c('label',{staticClass:"label"},[_vm._v("产品机型")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productModel))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":10}},[_c('el-col',{attrs:{"span":24}},[_c('label',{staticClass:"label"},[_vm._v("发动机序列号")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.serialNo))])])],1)],1),_vm._v(" "),_c('el-main',[_c('el-steps',{attrs:{"direction":"vertical","active":_vm.number}},_vm._l((_vm.StepDatas),function(stepData,index){return _c('el-step',{key:index,attrs:{"title":stepData.title,"status":stepData.status}})}))],1)],1),_vm._v(" "),_c('div',{staticClass:"bottom-form"},[_c('el-table',{staticStyle:{"width":"100%"},attrs:{"data":_vm.tableData,"height":"300","border":""}},[_c('el-table-column',{attrs:{"type":"index","label":"#","width":"50"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productOrderNum","label":"订单编号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":"工单编号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"serialNo","label":"发动机号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"scanCode","label":"曲轴扫描码"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"startTime","formatter":_vm.dateFormat,"label":"生成时间"}})],1)],1),_vm._v(" "),_c('div',{staticClass:"icon-pad-history",on:{"click":function($event){_vm.getHistoryInfo()}}}),_vm._v(" "),_c('el-dialog',{attrs:{"visible":_vm.dialogTableVisible,"width":"100%","top":"10vh"},on:{"update:visible":function($event){_vm.dialogTableVisible=$event}}},[_c('el-table',{attrs:{"data":_vm.gridData}},[_c('el-table-column',{attrs:{"type":"index","label":"序号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productOrderNum","label":_vm.$t('message.productOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":_vm.$t('message.productionOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":_vm.$t('message.materialCode')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialText","label":_vm.$t('message.materialText')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productModel","label":_vm.$t('message.productModel')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"serialNo","label":_vm.$t('message.serialNo')}})],1),_vm._v(" "),_c('el-pagination',{attrs:{"page-size":_vm.pagesize,"layout":"total,prev, pager, next","total":_vm.total},on:{"current-change":_vm.handleCurrentChange}})],1)],1)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-bcd17750","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/views/assembly/pt/initialize.vue
+var pt_initialize_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"assemblyOnline"},[_c('el-container',[_c('el-aside',{attrs:{"width":"60%"}},[_c('el-row',{attrs:{"gutter":10}},[_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("订单编号")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("工单编号")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productionOrderNum))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":10}},[_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("产品机型")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productModel))])]),_vm._v(" "),_c('el-col',{attrs:{"span":12}},[_c('label',{staticClass:"label"},[_vm._v("进度")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo2.completeQty)),_c('span',[_vm._v("/")]),_vm._v(_vm._s(_vm.proinfo2.plannedQuantity))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":10}},[_c('el-col',{attrs:{"span":24}},[_c('label',{staticClass:"label"},[_vm._v("发动机序列号")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.serialNo))])])],1)],1),_vm._v(" "),_c('el-main',[_c('el-steps',{attrs:{"direction":"vertical","active":_vm.number}},_vm._l((_vm.StepDatas),function(stepData,index){return _c('el-step',{key:index,attrs:{"title":stepData.title,"status":stepData.status}})}))],1)],1),_vm._v(" "),_c('div',{staticClass:"bottom-form"},[_c('el-table',{staticStyle:{"width":"100%"},attrs:{"data":_vm.tableData,"height":"300","border":""}},[_c('el-table-column',{attrs:{"type":"index","label":"#","width":"50"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productOrderNum","label":"订单编号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":"工单编号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"serialNo","label":"发动机号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"scanCode","label":"曲轴扫描码"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"startTime","formatter":_vm.dateFormat,"label":"生成时间"}})],1)],1),_vm._v(" "),_c('div',{staticClass:"icon-pad-history",on:{"click":function($event){_vm.getHistoryInfo()}}}),_vm._v(" "),_c('el-dialog',{attrs:{"visible":_vm.dialogTableVisible,"width":"100%","top":"10vh"},on:{"update:visible":function($event){_vm.dialogTableVisible=$event}}},[_c('el-table',{attrs:{"data":_vm.gridData}},[_c('el-table-column',{attrs:{"type":"index","label":"序号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productOrderNum","label":_vm.$t('message.productOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":_vm.$t('message.productionOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":_vm.$t('message.materialCode')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialText","label":_vm.$t('message.materialText')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productModel","label":_vm.$t('message.productModel')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"serialNo","label":_vm.$t('message.serialNo')}})],1),_vm._v(" "),_c('el-pagination',{attrs:{"page-size":_vm.pagesize,"layout":"total,prev, pager, next","total":_vm.total},on:{"current-change":_vm.handleCurrentChange}})],1)],1)}
 var pt_initialize_staticRenderFns = []
 var pt_initialize_esExports = { render: pt_initialize_render, staticRenderFns: pt_initialize_staticRenderFns }
 /* harmony default export */ var views_assembly_pt_initialize = (pt_initialize_esExports);
 // CONCATENATED MODULE: ./src/views/assembly/pt/initialize.vue
 function pt_initialize_injectStyle (ssrContext) {
-  __webpack_require__("a25Z")
+  __webpack_require__("Csx/")
 }
 var pt_initialize_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -12739,6 +12806,8 @@ var repair_Component = repair_normalizeComponent(
 //
 //
 //
+//
+
 
 
 
@@ -12763,10 +12832,12 @@ var repair_Component = repair_normalizeComponent(
     };
   },
   beforeRouteLeave: function beforeRouteLeave(to, from, next) {
+    this.unsubscribe();
     this.closeCom();
     next();
   },
   created: function created() {
+    this.subscribe();
     this.getMachiningProductionQueue();
     var serial = JSON.parse(window.localStorage.getItem("serialPort"));
     if (serial == null) {
@@ -12781,6 +12852,24 @@ var repair_Component = repair_normalizeComponent(
   },
 
   methods: {
+    subscribe: function subscribe() {
+      var _this = this;
+      var loc = JSON.parse(window.localStorage.getItem("terminal"));
+      var siteCode = loc.siteCode;
+      var topic = "/order/" + siteCode + "/refresh";
+      mqtt.subscribe(topic, "", "message");
+      mqtt.registerMessageHandler(topic, "message", function (message) {
+        var data = JSON.parse(message.payloadString);
+        console.log(data);
+        if (data) {
+          _this.getMachiningProductionQueue();
+        }
+      });
+    },
+    unsubscribe: function unsubscribe() {
+      mqtt.unsubscribeAll();
+    },
+
     show: function show(ev) {
       var _this = this;
       if (ev.keyCode == 13) {
@@ -12914,11 +13003,25 @@ var repair_Component = repair_normalizeComponent(
     validMachiningProductRecord: function validMachiningProductRecord() {
       var _this4 = this;
 
-      console.log(this.productionOrderNum);
-      if (this.productionOrderNum == "") {
+      console.log(this.tableData);
+      //刷新队列，避免强制关闭等异常情况
+      var temp = 0;
+      this.tableData.forEach(function (item) {
+        if (_this4.productionOrderNum == item.productionOrderNum) {
+          temp++;
+        }
+      });
+      console.log(temp);
+      if (this.code == "") {
         this.$message({
           type: "error",
-          message: "请先选择工单！"
+          message: "零件条码不能为空！"
+        });
+      } else if (this.productionOrderNum == "" || temp < 1) {
+        this.proinfo = "";
+        this.$message({
+          type: "error",
+          message: "当前工单不存在，请选择工单！"
         });
       } else if (this.productCount >= this.plannedQty) {
         this.centerDialogVisible = true;
@@ -13137,6 +13240,8 @@ var repair_Component = repair_normalizeComponent(
 //
 //
 //
+//
+
 
 
 
@@ -13161,10 +13266,12 @@ var repair_Component = repair_normalizeComponent(
     };
   },
   beforeRouteLeave: function beforeRouteLeave(to, from, next) {
+    this.unsubscribe();
     this.closeCom();
     next();
   },
   created: function created() {
+    this.subscribe();
     this.getMachiningProductionQueue();
     var serial = JSON.parse(window.localStorage.getItem("serialPort"));
     if (serial == null) {
@@ -13179,6 +13286,24 @@ var repair_Component = repair_normalizeComponent(
   },
 
   methods: {
+    subscribe: function subscribe() {
+      var _this = this;
+      var loc = JSON.parse(window.localStorage.getItem("terminal"));
+      var siteCode = loc.siteCode;
+      var topic = "/order/" + siteCode + "/refresh";
+      mqtt.subscribe(topic, "", "message");
+      mqtt.registerMessageHandler(topic, "message", function (message) {
+        var data = JSON.parse(message.payloadString);
+        console.log(data);
+        if (data) {
+          _this.getMachiningProductionQueue();
+        }
+      });
+    },
+    unsubscribe: function unsubscribe() {
+      mqtt.unsubscribeAll();
+    },
+
     show: function show(ev) {
       var _this = this;
       if (ev.keyCode == 13) {
@@ -13312,11 +13437,25 @@ var repair_Component = repair_normalizeComponent(
     validMachiningProductRecord: function validMachiningProductRecord() {
       var _this4 = this;
 
-      console.log(this.productionOrderNum);
-      if (this.productionOrderNum == "") {
+      console.log(this.tableData);
+      //刷新队列，避免强制关闭等异常情况
+      var temp = 0;
+      this.tableData.forEach(function (item) {
+        if (_this4.productionOrderNum == item.productionOrderNum) {
+          temp++;
+        }
+      });
+      console.log(temp);
+      if (this.code == "") {
         this.$message({
           type: "error",
-          message: "请先选择工单！"
+          message: "零件条码不能为空！"
+        });
+      } else if (this.productionOrderNum == "" || temp < 1) {
+        this.proinfo = "";
+        this.$message({
+          type: "error",
+          message: "当前工单不存在，请选择工单！"
         });
       } else if (this.productCount >= this.plannedQty) {
         this.centerDialogVisible = true;
@@ -13425,14 +13564,14 @@ var repair_Component = repair_normalizeComponent(
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-0334e546","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/views/machining/load.vue
-var machining_load_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"machineplusOnline"},[_c('div',{staticClass:"convent"},[_c('div',{staticClass:"convent-input"},[_c('span',{staticStyle:{"width":"8rem","font-size":"1.4rem","color":"#595959","margin-right":"1rem"}},[_vm._v("物料条码")]),_vm._v(" "),_c('el-input',{attrs:{"size":"50","clearable":""},nativeOn:{"keyup":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.show($event)}},model:{value:(_vm.code),callback:function ($$v) {_vm.code=$$v},expression:"code"}}),_vm._v(" "),_c('el-button',{attrs:{"type":"primary"},on:{"click":function($event){_vm.validMachiningProductRecord()}}},[_vm._v("确定")]),_vm._v(" "),_c('div',{staticClass:"counts"},[_c('span',{staticStyle:{"font-size":"18px","color":"#515152","float":"left","margin-left":".6rem"}},[_vm._v("已扫")]),_vm._v(" "),_c('span',{staticStyle:{"font-size":"24px","color":"#00AFEB","float":"left","margin-left":"30px"}},[_vm._v(_vm._s(_vm.productCount))]),_vm._v(" "),_c('span',{staticStyle:{"float":"left","margin":"0 10px"}},[_vm._v("/")]),_vm._v(" "),_c('span',{staticStyle:{"font-size":"18px","float":"left"}},[_vm._v(_vm._s(_vm.plannedQty))])])],1)]),_vm._v(" "),_c('div',{staticClass:"topbox"},[_c('div',{staticClass:"right-container",attrs:{"id":"currentorder"}},[_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":6}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productionOrderNum')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productionOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":6}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.plannedQuantity')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.plannedQty))])]),_vm._v(" "),_c('el-col',{attrs:{"span":6}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.materialCode')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.materialCode))])]),_vm._v(" "),_c('el-col',{attrs:{"span":6}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productModel')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productModel))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":10}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productOrderNum')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":14}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.materialText')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.materialText))])])],1)],1)]),_vm._v(" "),_c('div',{staticClass:"bottom-form"},[_c('el-table',{ref:"table",staticStyle:{"width":"100%"},attrs:{"data":_vm.tableData,"border":"","highlight-current-row":""},on:{"current-change":_vm.current}},[_c('el-table-column',{attrs:{"prop":"productOrderNum","label":_vm.$t('message.productOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":_vm.$t('message.productionOrderNum'),"width":"230"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":_vm.$t('message.materialCode')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"plannedQty","label":_vm.$t('message.plannedQuantity')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"scanQty","label":_vm.$t('message.scanned')}})],1)],1),_vm._v(" "),_c('div',{staticClass:"history-info"},[_c('el-dialog',{attrs:{"visible":_vm.dialogTableVisible,"width":"95%"},on:{"update:visible":function($event){_vm.dialogTableVisible=$event}}},[_c('el-table',{attrs:{"align":"left","data":_vm.gridData}},[_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":"工单编号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialText","label":"物料描述"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":"物料编号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"scanCode","label":"扫描条码"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"scanTime","label":"扫描时间","formatter":_vm.dateFormat}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"qty","label":"数量"}})],1),_vm._v(" "),_c('el-pagination',{attrs:{"background":"","layout":"total,prev, pager, next","page-size":_vm.pagesize,"total":_vm.total},on:{"current-change":_vm.currentChange}})],1)],1),_vm._v(" "),_c('el-dialog',{attrs:{"title":"注意","visible":_vm.centerDialogVisible,"width":"50%","top":"30vh","show-close":true,"center":""},on:{"update:visible":function($event){_vm.centerDialogVisible=$event}}},[(_vm.productCount==_vm.plannedQty)?_c('span',[_vm._v("已扫数量等于计划数量")]):_vm._e(),_vm._v(" "),(_vm.productCount>_vm.plannedQty)?_c('span',[_vm._v("已扫数量超出计划数量")]):_vm._e(),_vm._v(" "),_c('span',{staticClass:"dialog-footer",attrs:{"slot":"footer"},slot:"footer"},[_c('el-button',{on:{"click":function($event){_vm.continueON()}}},[_vm._v("继续")]),_vm._v(" "),_c('el-button',{attrs:{"type":"primary"},on:{"click":function($event){_vm.onFinish()}}},[_vm._v("完成")])],1)]),_vm._v(" "),_c('div',{staticClass:"icon-pad-history",on:{"click":function($event){_vm.getHistoryInfo()}}})],1)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-3c0a3a94","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/views/machining/load.vue
+var machining_load_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"machineplusOnline"},[_c('div',{staticClass:"convent"},[_c('div',{staticClass:"convent-input"},[_c('span',{staticStyle:{"width":"8rem","font-size":"1.4rem","color":"#595959","margin-right":"1rem"}},[_vm._v("物料条码")]),_vm._v(" "),_c('el-input',{attrs:{"size":"50","clearable":""},nativeOn:{"keyup":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.show($event)}},model:{value:(_vm.code),callback:function ($$v) {_vm.code=$$v},expression:"code"}}),_vm._v(" "),_c('el-button',{attrs:{"type":"primary"},on:{"click":function($event){_vm.validMachiningProductRecord()}}},[_vm._v("确定")]),_vm._v(" "),_c('div',{staticClass:"counts"},[_c('span',{staticStyle:{"font-size":"18px","color":"#515152","float":"left","margin-left":".6rem"}},[_vm._v("已扫")]),_vm._v(" "),_c('span',{staticStyle:{"font-size":"24px","color":"#00AFEB","float":"left","margin-left":"30px"}},[_vm._v(_vm._s(_vm.productCount))]),_vm._v(" "),_c('span',{staticStyle:{"float":"left","margin":"0 10px"}},[_vm._v("/")]),_vm._v(" "),_c('span',{staticStyle:{"font-size":"18px","float":"left"}},[_vm._v(_vm._s(_vm.plannedQty))])])],1)]),_vm._v(" "),_c('div',{staticClass:"topbox"},[_c('div',{staticClass:"right-container",attrs:{"id":"currentorder"}},[_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":6}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productionOrderNum')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productionOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":6}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.plannedQuantity')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.plannedQty))])]),_vm._v(" "),_c('el-col',{attrs:{"span":6}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.materialCode')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.materialCode))])]),_vm._v(" "),_c('el-col',{attrs:{"span":6}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productModel')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productModel))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":8}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.productOrderNum')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":8}},[_c('label',{staticClass:"label"},[_vm._v(_vm._s(_vm.$t('message.materialText')))]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.materialText))])])],1)],1)]),_vm._v(" "),_c('div',{staticClass:"bottom-form"},[_c('el-table',{ref:"table",staticStyle:{"width":"100%"},attrs:{"data":_vm.tableData,"border":"","highlight-current-row":""},on:{"current-change":_vm.current}},[_c('el-table-column',{attrs:{"prop":"productOrderNum","label":_vm.$t('message.productOrderNum')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":_vm.$t('message.productionOrderNum'),"width":"230"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":_vm.$t('message.materialCode')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"plannedQty","label":_vm.$t('message.plannedQuantity')}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"scanQty","label":_vm.$t('message.scanned')}})],1)],1),_vm._v(" "),_c('div',{staticClass:"history-info"},[_c('el-dialog',{attrs:{"visible":_vm.dialogTableVisible,"width":"95%"},on:{"update:visible":function($event){_vm.dialogTableVisible=$event}}},[_c('el-table',{attrs:{"align":"left","data":_vm.gridData}},[_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":"工单编号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialText","label":"物料描述"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":"物料编号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"scanCode","label":"扫描条码"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"scanTime","label":"扫描时间","formatter":_vm.dateFormat}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"qty","label":"数量"}})],1),_vm._v(" "),_c('el-pagination',{attrs:{"background":"","layout":"total,prev, pager, next","page-size":_vm.pagesize,"total":_vm.total},on:{"current-change":_vm.currentChange}})],1)],1),_vm._v(" "),_c('el-dialog',{attrs:{"title":"注意","visible":_vm.centerDialogVisible,"width":"50%","top":"30vh","show-close":true,"center":""},on:{"update:visible":function($event){_vm.centerDialogVisible=$event}}},[(_vm.productCount==_vm.plannedQty)?_c('span',[_vm._v("已扫数量等于计划数量")]):_vm._e(),_vm._v(" "),(_vm.productCount>_vm.plannedQty)?_c('span',[_vm._v("已扫数量超出计划数量")]):_vm._e(),_vm._v(" "),_c('span',{staticClass:"dialog-footer",attrs:{"slot":"footer"},slot:"footer"},[_c('el-button',{on:{"click":function($event){_vm.continueON()}}},[_vm._v("继续")]),_vm._v(" "),_c('el-button',{attrs:{"type":"primary"},on:{"click":function($event){_vm.onFinish()}}},[_vm._v("完成")])],1)]),_vm._v(" "),_c('div',{staticClass:"icon-pad-history",on:{"click":function($event){_vm.getHistoryInfo()}}})],1)}
 var machining_load_staticRenderFns = []
 var machining_load_esExports = { render: machining_load_render, staticRenderFns: machining_load_staticRenderFns }
 /* harmony default export */ var selectortype_template_index_0_src_views_machining_load = (machining_load_esExports);
 // CONCATENATED MODULE: ./src/views/machining/load.vue
 function machining_load_injectStyle (ssrContext) {
-  __webpack_require__("MeZw")
+  __webpack_require__("Biw1")
 }
 var machining_load_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -13781,14 +13920,14 @@ var machining_load_Component = machining_load_normalizeComponent(
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-1dab0c00","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/views/machining/ch/initialize.vue
-var ch_initialize_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"cyheadOnline"},[_c('div',{staticClass:"top"},[_c('div',{staticClass:"left"},[_c('h2',[_vm._v("产品序列号")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.serialNo))]),_vm._v(" "),_c('div',{staticStyle:{"display":"flex"}},[_c('div',{staticStyle:{"flex":"1"}},[_c('h2',[_vm._v("工单编号")]),_vm._v(" "),_c('div',{staticClass:"detail2"},[_vm._v(_vm._s(_vm.proinfo.productionOrderNum))])]),_vm._v(" "),_c('div',{staticStyle:{"flex":"1"}},[_c('h2',[_vm._v("订单编号")]),_vm._v(" "),_c('div',{staticClass:"detail2"},[_vm._v(_vm._s(_vm.proinfo.productOrderNum))])])]),_vm._v(" "),_c('h2',[_vm._v("进度")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_c('span',{staticStyle:{"font-size":"35px","color":"red"}},[_vm._v(_vm._s(_vm.proinfo.completeQty))]),_c('span',[_vm._v("/")]),_c('span',{staticStyle:{"font-size":"35px","color":"green"}},[_vm._v(_vm._s(_vm.proinfo.plannedQuantity))])])]),_vm._v(" "),_c('div',{staticClass:"right"},[_c('el-steps',{attrs:{"active":_vm.number,"direction":"vertical"}},_vm._l((_vm.StepDatas),function(stepData,index){return _c('el-step',{key:index,attrs:{"title":stepData.title,"status":stepData.status}})}))],1)]),_vm._v(" "),_vm._m(0)])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-35b6db36","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/views/machining/ch/initialize.vue
+var ch_initialize_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"cyheadOnline"},[_c('div',{staticClass:"top"},[_c('div',{staticClass:"left"},[_c('h2',[_vm._v("产品序列号")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.serialNo))]),_vm._v(" "),_c('div',{staticStyle:{"display":"flex"}},[_c('div',{staticStyle:{"flex":"1"}},[_c('h2',[_vm._v("工单编号")]),_vm._v(" "),_c('div',{staticClass:"detail2"},[_vm._v(_vm._s(_vm.proinfo.productionOrderNum))])]),_vm._v(" "),_c('div',{staticStyle:{"flex":"1"}},[_c('h2',[_vm._v("订单编号")]),_vm._v(" "),_c('div',{staticClass:"detail2"},[_vm._v(_vm._s(_vm.proinfo.productOrderNum))])])]),_vm._v(" "),_c('h2',[_vm._v("进度")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_c('span',{staticStyle:{"font-size":"35px","color":"red"}},[_vm._v(_vm._s(_vm.proinfo.completeQty))]),_c('span',[_vm._v("/")]),_vm._v(_vm._s(_vm.proinfo.plannedQuantity)),_c('span',{staticStyle:{"font-size":"35px","color":"green"}},[_vm._v(_vm._s(_vm.proinfo.plannedQuantity))])])]),_vm._v(" "),_c('div',{staticClass:"right"},[_c('el-steps',{attrs:{"active":_vm.number,"direction":"vertical"}},_vm._l((_vm.StepDatas),function(stepData,index){return _c('el-step',{key:index,attrs:{"title":stepData.title,"status":stepData.status}})}))],1)]),_vm._v(" "),_vm._m(0)])}
 var ch_initialize_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"bottom"},[_c('img',{attrs:{"src":"","alt":""}})])}]
 var ch_initialize_esExports = { render: ch_initialize_render, staticRenderFns: ch_initialize_staticRenderFns }
 /* harmony default export */ var views_machining_ch_initialize = (ch_initialize_esExports);
 // CONCATENATED MODULE: ./src/views/machining/ch/initialize.vue
 function ch_initialize_injectStyle (ssrContext) {
-  __webpack_require__("fmIk")
+  __webpack_require__("4JGI")
 }
 var ch_initialize_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -13801,7 +13940,7 @@ var ch_initialize___vue_template_functional__ = false
 /* styles */
 var ch_initialize___vue_styles__ = ch_initialize_injectStyle
 /* scopeId */
-var ch_initialize___vue_scopeId__ = "data-v-1dab0c00"
+var ch_initialize___vue_scopeId__ = "data-v-35b6db36"
 /* moduleIdentifier (server only) */
 var ch_initialize___vue_module_identifier__ = null
 var ch_initialize_Component = ch_initialize_normalizeComponent(
@@ -17319,10 +17458,12 @@ var machining_unload_Component = machining_unload_normalizeComponent(
     }, "total", 0);
   },
   beforeRouteLeave: function beforeRouteLeave(to, from, next) {
+    this.unsubscribe();
     this.closeCom();
     next();
   },
   created: function created() {
+    this.subscribe();
     this.getMachiningProductionQueue();
     var serial = JSON.parse(window.localStorage.getItem("serialPort"));
     if (serial == null) {
@@ -17337,6 +17478,24 @@ var machining_unload_Component = machining_unload_normalizeComponent(
   },
 
   methods: {
+    subscribe: function subscribe() {
+      var _this = this;
+      var loc = JSON.parse(window.localStorage.getItem("terminal"));
+      var siteCode = loc.siteCode;
+      var topic = "/order/" + siteCode + "/refresh";
+      mqtt.subscribe(topic, "", "message");
+      mqtt.registerMessageHandler(topic, "message", function (message) {
+        var data = JSON.parse(message.payloadString);
+        console.log(data);
+        if (data) {
+          _this.getMachiningProductionQueue();
+        }
+      });
+    },
+    unsubscribe: function unsubscribe() {
+      mqtt.unsubscribeAll();
+    },
+
     show: function show(ev) {
       var _this = this;
       if (ev.keyCode == 13) {
@@ -17368,11 +17527,23 @@ var machining_unload_Component = machining_unload_normalizeComponent(
     getCount: function getCount() {
       var _this2 = this;
 
+      var temp = 0;
+      this.tableData.forEach(function (item) {
+        if (_this2.productionOrderNum == item.productionOrderNum) {
+          temp++;
+        }
+      });
       if (this.code == "") {
         this.$message({
           type: "error",
           message: "零件条码不能为空！"
         });
+      } else if (this.productionOrderNum == "" || temp < 1) {
+        this.$message({
+          type: "error",
+          message: "当前工单不存在，请先选择工单"
+        });
+        this.proinfo = "";
       } else {
         var body = {
           scanCode: this.code
@@ -17732,10 +17903,12 @@ var machining_unload_Component = machining_unload_normalizeComponent(
     }, "total", 0);
   },
   beforeRouteLeave: function beforeRouteLeave(to, from, next) {
+    this.unsubscribe();
     this.closeCom();
     next();
   },
   created: function created() {
+    this.subscribe();
     this.getMachiningProductionQueue();
     var serial = JSON.parse(window.localStorage.getItem("serialPort"));
     if (serial == null) {
@@ -17750,6 +17923,24 @@ var machining_unload_Component = machining_unload_normalizeComponent(
   },
 
   methods: {
+    subscribe: function subscribe() {
+      var _this = this;
+      var loc = JSON.parse(window.localStorage.getItem("terminal"));
+      var siteCode = loc.siteCode;
+      var topic = "/order/" + siteCode + "/refresh";
+      mqtt.subscribe(topic, "", "message");
+      mqtt.registerMessageHandler(topic, "message", function (message) {
+        var data = JSON.parse(message.payloadString);
+        console.log(data);
+        if (data) {
+          _this.getMachiningProductionQueue();
+        }
+      });
+    },
+    unsubscribe: function unsubscribe() {
+      mqtt.unsubscribeAll();
+    },
+
     show: function show(ev) {
       var _this = this;
       if (ev.keyCode == 13) {
@@ -17781,11 +17972,23 @@ var machining_unload_Component = machining_unload_normalizeComponent(
     getCount: function getCount() {
       var _this2 = this;
 
+      var temp = 0;
+      this.tableData.forEach(function (item) {
+        if (_this2.productionOrderNum == item.productionOrderNum) {
+          temp++;
+        }
+      });
       if (this.code == "") {
         this.$message({
           type: "error",
           message: "零件条码不能为空！"
         });
+      } else if (this.productionOrderNum == "" || temp < 1) {
+        this.$message({
+          type: "error",
+          message: "当前工单不存在，请先选择工单"
+        });
+        this.proinfo = "";
       } else {
         var body = {
           scanCode: this.code
@@ -18013,14 +18216,14 @@ var machining_unload_Component = machining_unload_normalizeComponent(
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-1f851fba","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/views/machining/cs/load.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-d56afd98","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vux-loader/src/before-template-compiler-loader.js!./node_modules/vux-loader/src/template-loader.js!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/views/machining/cs/load.vue
 var cs_load_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"crankshaftOnline"},[_c('div',{staticClass:"convent"},[_c('span',{staticStyle:{"width":"120px","font-size":"18px","color":"#595959","float":"left"}},[_vm._v("零件条码")]),_vm._v(" "),_c('el-input',{staticStyle:{"width":"400px","float":"left"},attrs:{"clearable":"","placeholder":"零件条码"},nativeOn:{"keyup":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.show($event)}},model:{value:(_vm.code),callback:function ($$v) {_vm.code=$$v},expression:"code"}}),_vm._v(" "),_c('span',{staticStyle:{"width":"140px","font-size":"18px","color":"#595959"}},[_vm._v("数量")]),_vm._v(" "),_c('el-input',{staticStyle:{"width":"100px","margin-right":"30px"},attrs:{"type":"number"},nativeOn:{"keyup":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.show2($event)}},model:{value:(_vm.count),callback:function ($$v) {_vm.count=_vm._n($$v)},expression:"count"}}),_vm._v(" "),_c('el-button',{staticStyle:{"margin-left":"30px"},attrs:{"type":"primary","size":"medium"},on:{"click":function($event){_vm.add()}}},[_vm._v("确定")])],1),_vm._v(" "),_c('div',{staticClass:"topbox"},[_c('div',{staticClass:"right-container",attrs:{"id":"currentorder"}},[_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":8}},[_c('label',{staticClass:"label"},[_vm._v("工单编号")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.productionOrderNum))])]),_vm._v(" "),_c('el-col',{attrs:{"span":8}},[_c('label',{staticClass:"label"},[_vm._v("物料编号")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.materialCode))])]),_vm._v(" "),_c('el-col',{attrs:{"span":8}},[_c('label',{staticClass:"label"},[_vm._v("物料描述")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.materialText))])])],1),_vm._v(" "),_c('el-row',{attrs:{"gutter":20}},[_c('el-col',{attrs:{"span":8}},[_c('label',{staticClass:"label"},[_vm._v("顺序号")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.orderNo))])]),_vm._v(" "),_c('el-col',{attrs:{"span":8}},[_c('label',{staticClass:"label"},[_vm._v("计划数量")]),_vm._v(" "),_c('div',{staticClass:"detail"},[_vm._v(_vm._s(_vm.proinfo.plannedQty))])])],1)],1)]),_vm._v(" "),_c('div',{staticClass:"bottom-form"},[_c('el-table',{ref:"table",attrs:{"data":_vm.tableData,"border":"","highlight-current-row":"","header-align":""},on:{"current-change":_vm.current}},[_c('el-table-column',{attrs:{"prop":"orderNo","label":"顺序号","width":"240"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":"工单编号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":"物料编码"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"plannedQty","label":"计划数量"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"scanQty","label":"已扫数量"}})],1)],1),_vm._v(" "),_c('div',{staticClass:"history-info"},[_c('el-dialog',{attrs:{"visible":_vm.dialogTableVisible,"width":"95%"},on:{"update:visible":function($event){_vm.dialogTableVisible=$event}}},[_c('el-table',{attrs:{"data":_vm.gridData}},[_c('el-table-column',{attrs:{"prop":"productionOrderNum","label":"工单编号"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialCode","label":"物料编码"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"materialText","label":"物料描述"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"scanTime","label":"扫描时间","formatter":_vm.dateFormat}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"scanCode","label":"扫描条码"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"qty","label":"扫描数量"}})],1),_vm._v(" "),_c('el-pagination',{attrs:{"background":"","page-size":_vm.pagesize,"layout":"total,prev, pager, next","total":_vm.total},on:{"current-change":_vm.handleCurrentChange}})],1)],1),_vm._v(" "),_c('el-dialog',{attrs:{"title":"注意","visible":_vm.centerDialogVisible,"width":"50%","top":"30vh","show-close":false,"center":""},on:{"update:visible":function($event){_vm.centerDialogVisible=$event}}},[_c('span',[_vm._v("已扫数量超出计划数量")]),_vm._v(" "),_c('span',{staticClass:"dialog-footer",attrs:{"slot":"footer"},slot:"footer"},[_c('el-button',{on:{"click":function($event){_vm.continueON()}}},[_vm._v("继续")]),_vm._v(" "),_c('el-button',{attrs:{"type":"primary"},on:{"click":function($event){_vm.onFinish()}}},[_vm._v("完成")])],1)]),_vm._v(" "),_c('div',{staticClass:"icon-pad-history",on:{"click":function($event){_vm.getHistoryInfo()}}})],1)}
 var cs_load_staticRenderFns = []
 var cs_load_esExports = { render: cs_load_render, staticRenderFns: cs_load_staticRenderFns }
 /* harmony default export */ var views_machining_cs_load = (cs_load_esExports);
 // CONCATENATED MODULE: ./src/views/machining/cs/load.vue
 function cs_load_injectStyle (ssrContext) {
-  __webpack_require__("QkQq")
+  __webpack_require__("TBd8")
 }
 var cs_load_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -19272,13 +19475,6 @@ new vue_esm["default"]({
 
 /***/ }),
 
-/***/ "QkQq":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "Rtzy":
 /***/ (function(module, exports) {
 
@@ -19286,14 +19482,7 @@ new vue_esm["default"]({
 
 /***/ }),
 
-/***/ "a25Z":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "bJPR":
+/***/ "TBd8":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -19314,7 +19503,7 @@ new vue_esm["default"]({
 
 /***/ }),
 
-/***/ "fmIk":
+/***/ "inK0":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -19336,6 +19525,13 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYUAAAAYCAYAAAAV
 /***/ }),
 
 /***/ "oWNG":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "rW+Q":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -19364,4 +19560,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAADqCAYAAACr
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.5b685c4dc11b747d5b3b.js.map
+//# sourceMappingURL=app.a6913d2ebecf5b466688.js.map
